@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'iniciarseccion',
+    loadChildren: () => import('./iniciarseccion/iniciarseccion.module').then( m => m.IniciarseccionPageModule)
+  },
+  {
+    path: 'recuperarcontra',
+    loadChildren: () => import('./recuperarcontra/recuperarcontra.module').then( m => m.RecuperarcontraPageModule)
+  },
 ];
 
 @NgModule({
